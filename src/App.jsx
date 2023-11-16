@@ -1,8 +1,14 @@
-import { useState } from "react";
+import Countdown from "./components/Countdown";
 import "./App.css";
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  // 14 days in seconds
+  const countdownTime = 14 * 24 * 60 * 60;
 
-  return <>HELLO</>;
+  return (
+    <>
+      <h2 className="page__title">WE'RE LAUNCHING SOON</h2>
+      <Countdown countdownTime={countdownTime} />
+    </>
+  );
 }

@@ -1,0 +1,6 @@
+.page__title {
+  color: hsl(var(--clr-neutral-100));
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+  text-align: center;
+}

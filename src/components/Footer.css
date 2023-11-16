@@ -1,0 +1,15 @@
+footer {
+  min-height: 25vh;
+  min-height: 25svh;
+  background-color: hsl(var(--clr-neutral-400));
+  background-image: url(/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  background-position: bottom right;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+  gap: 2rem;
+}
