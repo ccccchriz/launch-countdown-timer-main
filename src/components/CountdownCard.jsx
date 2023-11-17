@@ -7,8 +7,8 @@ const CountdownCard = ({ time, title }) => {
     <div className="countdowncard">
       <div className="countdowncard__number">
         <div className="top"></div>
-        <div className="circle circle-left"></div>
-        <div className="circle circle-right"></div>
+        <div className="countdowncard__circle countdowncard__circle-left"></div>
+        <div className="countdowncard__circle countdowncard__circle-right"></div>
         <span>{time}</span>
       </div>
       <div className="countdowncard__text">{title}</div>

@@ -29,7 +29,7 @@
   position: absolute;
 }
 
-.top {
+.countdowncard__top {
   position: absolute;
   height: 100%;
   width: 150%;
@@ -38,7 +38,7 @@
   transform: translatey(-50%);
 }
 
-.circle {
+.countdowncard__circle {
   position: relative;
   width: 10%;
   aspect-ratio: 1;
@@ -47,12 +47,12 @@
   z-index: 5;
 }
 
-.circle-left {
+.countdowncard__circle-left {
   transform: translateY(50%);
   left: -50%;
 }
 
-.circle-right {
+.countdowncard__circle-right {
   transform: translateY(-50%);
   left: 50%;
 }
