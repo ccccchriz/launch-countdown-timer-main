@@ -22,9 +22,7 @@ const Countdown = ({ countdownTime }) => {
 
   return (
     <section className="countdown">
-      <div className="countdown__number countdown__number--days">
-        {days < 10 ? `0${days}` : days}
-      </div>
+      <div className="countdown__number countdown__number--days">{days}</div>
       <div className="countdown__number countdown__number--hours">{hours}</div>
       <div className="countdown__number countdown__number--minutes">
         {minutes}
