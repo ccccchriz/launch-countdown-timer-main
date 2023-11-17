@@ -32,6 +32,10 @@ const Countdown = ({ countdownTime }) => {
       <div className="countdown__number countdown__number--seconds">
         {seconds}
       </div>
+      <div className="countdown__text">DAYS</div>
+      <div className="countdown__text">HOURS</div>
+      <div className="countdown__text">MINUTES</div>
+      <div className="countdown__text">SECONDS</div>
     </section>
   );
 };

@@ -12,21 +12,10 @@
   color: hsl(var(--clr-primary-red));
 }
 
-.countdown__number::after {
+.countdown__text {
   content: "DAYS";
   color: hsl(var(--clr-neutral-200));
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   font-size: 0.875rem;
-}
-
-.countdown__number--hours::after {
-  content: "HOURS";
-}
-
-.countdown__number--minutes::after {
-  content: "MINUTES";
-}
-
-.countdown__number--seconds::after {
-  content: "SECONDS";
+  text-align: center;
 }
