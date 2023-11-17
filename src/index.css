@@ -87,6 +87,9 @@ main {
   background-color: hsl(var(--clr-neutral-400));
   font-family: var(--ff-base);
   font-weight: var(--fw-bold);
-  display: grid;
-  place-items: center;
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

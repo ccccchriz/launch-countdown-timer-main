@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Countdown.css";
+import CountdownCard from "./CountdownCard";
 
 const Countdown = ({ countdownTime }) => {
   const [time, setTime] = useState(countdownTime);
@@ -22,18 +23,10 @@ const Countdown = ({ countdownTime }) => {
 
   return (
     <section className="countdown">
-      <div className="countdown__number countdown__number--days">{days}</div>
-      <div className="countdown__number countdown__number--hours">{hours}</div>
-      <div className="countdown__number countdown__number--minutes">
-        {minutes}
-      </div>
-      <div className="countdown__number countdown__number--seconds">
-        {seconds}
-      </div>
-      <div className="countdown__text">DAYS</div>
-      <div className="countdown__text">HOURS</div>
-      <div className="countdown__text">MINUTES</div>
-      <div className="countdown__text">SECONDS</div>
+      <CountdownCard time={days} title={"DAYS"} />
+      <CountdownCard time={hours} title={"HOURS"} />
+      <CountdownCard time={minutes} title={"MINUTES"} />
+      <CountdownCard time={seconds} title={"SECONDS"} />
     </section>
   );
 };

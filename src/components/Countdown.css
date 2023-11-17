@@ -5,23 +5,3 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
 }
-
-.countdown__number {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  color: hsl(var(--clr-primary-red));
-  font-size: 2rem;
-  aspect-ratio: 1;
-  background-color: hsl(var(--clr-neutral-200));
-}
-
-.countdown__text {
-  content: "DAYS";
-  color: hsl(var(--clr-primary-blue));
-  letter-spacing: 0.2rem;
-  font-size: 0.6rem;
-  text-align: center;
-}
