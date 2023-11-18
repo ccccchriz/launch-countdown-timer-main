@@ -4,11 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import Footer from "./components/Footer.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
 ReactDOM.createRoot(document.getElementById("footer")).render(
   <React.StrictMode>

@@ -23,10 +23,10 @@ const Countdown = ({ countdownTime }) => {
 
   return (
     <section className="countdown">
-      <CountdownCard time={days} title={"DAYS"} />
-      <CountdownCard time={hours} title={"HOURS"} />
-      <CountdownCard time={minutes} title={"MINUTES"} />
-      <CountdownCard time={seconds} title={"SECONDS"} />
+      <CountdownCard time={days} title="DAYS" />
+      <CountdownCard time={hours} title="HOURS" />
+      <CountdownCard time={minutes} title="MINUTES" />
+      <CountdownCard time={seconds} title="SECONDS" />
     </section>
   );
 };

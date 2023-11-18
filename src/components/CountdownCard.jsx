@@ -1,19 +1,79 @@
+import { useRef } from "react";
 import "./CountdownCard.css";
 
 const CountdownCard = ({ time, title }) => {
-  if (time < 10) time = "0" + time;
+  let prev = useRef(time);
+  const animate = prev.current != time;
 
-  return (
-    <div className="countdowncard">
-      <div className="countdowncard__number">
-        <div className="countdowncard__top"></div>
-        <div className="countdowncard__circle countdowncard__circle-left"></div>
-        <div className="countdowncard__circle countdowncard__circle-right"></div>
-        <span>{time}</span>
+  prev.current = time;
+
+  let prevNumber = 0;
+
+  if (time == -1) prevNumber = 58;
+  else if (time == 59) prevNumber = 0;
+  else prevNumber = time + 1;
+
+  if (time < 10) time = "0" + time;
+  if (prevNumber < 10) prevNumber = "0" + prevNumber;
+
+  if (animate) {
+    return (
+      <div className="countdowncard" key={time}>
+        <div className="countdown-container">
+          <div
+            className={"countdowncard__number" + (animate ? " animate" : "")}
+          >
+            <div className="countdowncard__top"></div>
+            <div className="countdowncard__circle countdowncard__circle-left"></div>
+            <div className="countdowncard__circle countdowncard__circle-right"></div>
+            <span>{time}</span>
+          </div>
+          <div
+            className={"countdowncard__number" + (animate ? " animate2" : "")}
+          >
+            <div className="countdowncard__top"></div>
+            <div className="countdowncard__circle countdowncard__circle-left"></div>
+            <div className="countdowncard__circle countdowncard__circle-right"></div>
+            <span>{prevNumber}</span>
+          </div>
+          <div className="countdowncard__number">
+            <div className="countdowncard__top"></div>
+            <div className="countdowncard__circle countdowncard__circle-left"></div>
+            <div className="countdowncard__circle countdowncard__circle-right"></div>
+            <span>{prevNumber}</span>
+          </div>
+          <div className="countdowncard__number">
+            <div className="countdowncard__top"></div>
+            <div className="countdowncard__circle countdowncard__circle-left"></div>
+            <div className="countdowncard__circle countdowncard__circle-right"></div>
+            <span>{time}</span>
+          </div>
+          <div className="countdowncard__number invisible">
+            <span>4</span>
+          </div>
+        </div>
+
+        <div className="countdowncard__text">{title}</div>
       </div>
-      <div className="countdowncard__text">{title}</div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="countdowncard" key={time}>
+        <div className="countdown-container">
+          <div className="countdowncard__number">
+            <div className="countdowncard__top"></div>
+            <div className="countdowncard__circle countdowncard__circle-left"></div>
+            <div className="countdowncard__circle countdowncard__circle-right"></div>
+            <span>{time}</span>
+          </div>
+          <div className="countdowncard__number invisible">
+            <span>4</span>
+          </div>
+        </div>
+        <div className="countdowncard__text">{title}</div>
+      </div>
+    );
+  }
 };
 
 export default CountdownCard;
