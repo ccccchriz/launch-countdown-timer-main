@@ -12,4 +12,10 @@ footer {
   align-items: flex-end;
   padding-bottom: 2rem;
   gap: 2rem;
+  transition: filter 0.3s;
+}
+
+footer > a:hover {
+  filter: brightness(0) saturate(100%) invert(54%) sepia(95%) saturate(2214%)
+    hue-rotate(310deg) brightness(101%) contrast(97%);
 }
