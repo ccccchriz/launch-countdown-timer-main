@@ -13,7 +13,7 @@ const Countdown = ({ countdownTime }) => {
     return () => clearInterval(interval);
   }, []);
 
-  let seconds = time;
+  let seconds = time < 0 ? 0 : time;
   const days = Math.floor(seconds / (24 * 60 * 60));
   seconds %= 24 * 60 * 60;
   const hours = Math.floor(seconds / (60 * 60));
