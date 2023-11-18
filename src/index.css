@@ -80,16 +80,19 @@ h6 {
   src: url();
 }
 
+body {
+  background-color: hsl(var(--clr-neutral-400));
+}
+
 main {
   min-height: 75vh;
   min-height: 75svh;
   background-image: url(/bg-stars.svg);
-  background-color: hsl(var(--clr-neutral-400));
   font-family: var(--ff-base);
   font-weight: var(--fw-bold);
   display: flex;
-  gap: 4rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }

@@ -13,6 +13,8 @@ const CountdownCard = ({ time, title }) => {
   else if (time == 59) prevNumber = 0;
   else prevNumber = time + 1;
 
+  if (title == "HOURS" && time == 23) prevNumber = "0";
+
   if (time < 10) time = "0" + time;
   if (prevNumber < 10) prevNumber = "0" + prevNumber;
 
@@ -20,17 +22,13 @@ const CountdownCard = ({ time, title }) => {
     return (
       <div className="countdowncard" key={time}>
         <div className="countdown-container">
-          <div
-            className={"countdowncard__number" + (animate ? " animate" : "")}
-          >
+          <div className="countdowncard__number animate">
             <div className="countdowncard__top"></div>
             <div className="countdowncard__circle countdowncard__circle-left"></div>
             <div className="countdowncard__circle countdowncard__circle-right"></div>
             <span>{time}</span>
           </div>
-          <div
-            className={"countdowncard__number" + (animate ? " animate2" : "")}
-          >
+          <div className="countdowncard__number animate2">
             <div className="countdowncard__top"></div>
             <div className="countdowncard__circle countdowncard__circle-left"></div>
             <div className="countdowncard__circle countdowncard__circle-right"></div>
@@ -49,7 +47,7 @@ const CountdownCard = ({ time, title }) => {
             <span>{time}</span>
           </div>
           <div className="countdowncard__number invisible">
-            <span>4</span>
+            <span></span>
           </div>
         </div>
 
@@ -67,7 +65,7 @@ const CountdownCard = ({ time, title }) => {
             <span>{time}</span>
           </div>
           <div className="countdowncard__number invisible">
-            <span>4</span>
+            <span></span>
           </div>
         </div>
         <div className="countdowncard__text">{title}</div>
