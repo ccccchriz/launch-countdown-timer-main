@@ -22,13 +22,13 @@ const CountdownCard = ({ time, title }) => {
     return (
       <div className="countdowncard" key={time}>
         <div className="countdown-container">
-          <div className="countdowncard__number animate">
+          <div className="countdowncard__number rotateBackward">
             <div className="countdowncard__top"></div>
             <div className="countdowncard__circle countdowncard__circle-left"></div>
             <div className="countdowncard__circle countdowncard__circle-right"></div>
             <span>{time}</span>
           </div>
-          <div className="countdowncard__number animate2">
+          <div className="countdowncard__number rotateForward">
             <div className="countdowncard__top"></div>
             <div className="countdowncard__circle countdowncard__circle-left"></div>
             <div className="countdowncard__circle countdowncard__circle-right"></div>
@@ -46,7 +46,7 @@ const CountdownCard = ({ time, title }) => {
             <div className="countdowncard__circle countdowncard__circle-right"></div>
             <span>{time}</span>
           </div>
-          <div className="countdowncard__number invisible">
+          <div className="countdowncard__number countdowncard__number--take-space">
             <span></span>
           </div>
         </div>
@@ -64,7 +64,7 @@ const CountdownCard = ({ time, title }) => {
             <div className="countdowncard__circle countdowncard__circle-right"></div>
             <span>{time}</span>
           </div>
-          <div className="countdowncard__number invisible">
+          <div className="countdowncard__number countdowncard__number--take-space">
             <span></span>
           </div>
         </div>
